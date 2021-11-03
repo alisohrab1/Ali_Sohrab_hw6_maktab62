@@ -3,11 +3,14 @@ const listDiv = document.createElement("div");
 const heading = document.createElement("h1");
 const h1Text = document.createTextNode("My Tasks");
 const body = document.getElementsByTagName("body")[0];
-
+const container = document.createElement("div");
+body.appendChild(container);
 heading.appendChild(h1Text);
 heading.style.color = "red";
-body.appendChild(heading);
-
+container.appendChild(heading);
+container.style.width = "300px";
+container.style.border = "2px solid black"
+container.style.padding = "5px"
 //list
 const oList = document.createElement("OL");
 const listItem1 = document.createElement("LI");
@@ -36,7 +39,7 @@ oList.appendChild(listItem4);
 //item5
 listItem5.appendChild(text5);
 oList.appendChild(listItem5);
-body.appendChild(oList);
+container.appendChild(oList);
 listItem5.style.textDecoration = "line-through";
 //unordered list
 const uList = document.createElement("UL");
@@ -47,7 +50,7 @@ const uList3 = document.createElement("LI");
 const uText1 = document.createTextNode("login");
 const uText2 = document.createTextNode("register");
 const uText3 = document.createTextNode("logout");
-listItem2.appendChild(uList);
+listItem3.appendChild(uList);
 //1
 uList1.appendChild(uText1);
 uList.appendChild(uList1);
@@ -65,5 +68,5 @@ const inputSub = document.createElement("input");
 inputSub.setAttribute("type","submit");
 inputSub.setAttribute("value","add task");
 inputSub.style.marginLeft = "5px";
-body.appendChild(inputText);
-body.appendChild(inputSub);
+container.appendChild(inputText);
+container.appendChild(inputSub);
